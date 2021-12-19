@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto:ital@0;1&display=swap');
+
+body {
+    background-color: #f1f1f1;/*цвет фона*/
+    color: black;/*цвет шрифта*/
+    font-size: 16px; /*размер шрифта*/
+    font-weight: normal;/*жирность шрифта*/
+    font-family: 'Roboto', sans-serif;
+}
+.avatar {
+    width: 200px; /*ширина 200px*/
+    border-radius: 28px; /*закругленные края*/
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);/*задает тень (смещение по X, Y, радиус размытия, цвет*/
+}
+.info {
+    display: flex; /*блоки становятся в одну строчку*/
+    margin-bottom: 20px;
+}
+
+/*при сужении экрана (на мобильных устройствах) необходимо менять свойства*/
+@media (max-width: 700px) {/*при ширине экрана меее 700px блок: .info*/ 
+    .info {
+        text-align: center;
+        display: block;/*блоки становятся в одну колонку*/
+    }
+}
+
+
+.info-text {
+    margin-left: 40px;
+}
+
+.info-text h4 {
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: #86898f;/*цвет текста*/
+    margin: 0;/*обнуление отступов (которые в браузере по умолчанию)*/
+    font-style: italic /*текст курсив*/;
+    font-weight: bold  /*жирность шрифта (жирный)*/;
+    text-decoration: none; /*шрифт подчеркнутый (нет)*/
+    /* text-transform: uppercase (все буквы большие);
+    letter-spacing: normal (разряженность текста (м/у буквами));
+    word-spacing: 42px; (разряженность м\у словами)*/
+}
+
+.info h1 {
+    color: black;/*цвет шрифта*/
+    font-style: normal /*текст курсив*/;
+    font-weight: bold;/*жирность шрифта*/
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container {
+max-width: 750px;/*макс возможная ширина контенера(будет адаптироваться под ширину экрана)*/
+margin: auto;/*делает отступы справа и слева одинаковые (контенер по центру)*/
+padding-top: 30px;
+}
+.social {
+    background: gray;
+    padding: 15px;
+    border: 5px solid rgb(119, 0, 255); /*solid - спллошная*/
+    margin: 20px;   
+    border-bottom-style: dotted;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+a:active {
+    color: blue;
+}
+
+a:visited {
+    color: gray;
+} 
+
+
+.bg-yellow {
+    background: #fff9dc;
+}
+
+.bg-green {
+    background: #e5ffe7;
+}
+
+.bg-red {
+    background: #ffe5e5;
+}
+
+.card {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;/*закругленные углы*/
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.list {
+padding: 0 20px;
+/* list-style: none; список без цифр */
+}
+
+.list li {/*обращение к каждому элементу списка*/
+   color: #86898f; /*цвет слов в списке*/
+   margin-bottom: 10px;
+   /* border-bottom: 1px solid black линии в списке */
+}
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px; /*отступы в таблице*/
+}
+
+/* .table td:nth-child(1),
+.table td:nth-child(3) {
+    color: gray;} /*1 и 3 колонки поменял цвет*/
+
+
+.table tr:nth-child(even) {
+background: red;   /*четные строки закрашены в красный*/
+}
+ 
+.table tr:nth-child(odd) {
+    background: greenyellow;   /*нечетные строки закрашены в красный*/
+    }
+
+    .link-list {
+        /* list-style: none;  если хотим убрать точки перед элементами списка*/
+        padding: 0;
+    }
+
+    .link-list li {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ccc; /*нижняя граница*/
+    }
+
+.contact h2 {
+    text-align: center;
+}
+
+.form-group label {
+    display: block;/*каждый элемент отдельный блок*/
+    font-size: 14px;
+    color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent; /*прозрачный*/
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    padding: 15px 0 10px;
+    outline: none; /*линии по бокам импутов (отсутствуют)*/
+    font-family: inherit; /*шрифт наследуется*/
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.row > .form-group {
+    width: 50%;/*блок занимает 50% ширины всего пространства окна*/
+    margin-right: 20px;
+}
+
+.row > .form-group:last-child { /*у последнего элемента в строке (form-group) будет отступ справа 0*/
+    margin-right: 0;
+}
+
+.btn {
+    background: #111;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    font-family: inherit;/*шрифт унаследованный*/
+    cursor: pointer;/*при наведении на кнопку меняется курсор*/
+}
+
+.btn:hover {
+    opacity: 0.9;/*при наведении на кнопку она бледнеет*/
+}
+
+.position {
+    position: relative; 
+    border: 4px solid black;
+    margin-top: 40px;
+    padding: 20px;
+    height: 300px;
+}
+
+.box { /*навигация*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #ccc;
+   
+}
+
+
+
+
+
+/**/
